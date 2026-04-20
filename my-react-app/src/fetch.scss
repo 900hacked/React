@@ -1,0 +1,13 @@
+$backcolor : #d48f8a;
+
+
+
+.nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    background-color: $backcolor ;
+    padding: 15px;
+}

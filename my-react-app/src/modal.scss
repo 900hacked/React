@@ -1,0 +1,75 @@
+$overlay-bg: rgba(0, 0, 0, 0.4);
+$modal-bg: #ffffff;
+
+$text-primary: #222;
+$text-secondary: #555;
+
+$cancel-bg: #444;
+$discard-bg: #e51c23;
+
+$close-border: #1976d2;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: $overlay-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .modal {
+    width: 600px;
+    background: $modal-bg;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    &-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        margin: 0;
+        font-weight: 500;
+        color: $text-primary;
+      }
+
+      .close-btn {
+        background: none;
+        border: 1px solid $close-border;
+        padding: 6px 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    }
+
+    &-body {
+      padding: 0 20px 20px 20px;
+      color: $text-secondary;
+    }
+
+    &-footer {
+      display: flex;
+      width: 100%;
+
+      button {
+        flex: 1;
+        padding: 16px;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+
+      .cancel-btn {
+        background: $cancel-bg;
+      }
+
+      .discard-btn {
+        background: $discard-bg;
+      }
+    }
+  }
+}
